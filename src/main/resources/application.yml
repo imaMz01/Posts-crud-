@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: Annotation-service
+  datasource:
+    password: 061201
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/postsDB
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        types.print.banner: false
+        format_sql: true
+server:
+  port: 8082
+logging:
+  level:
+    root: INFO
+    com:
+      Custom:
+        Annotation:
+          Aspect: DEBUG
